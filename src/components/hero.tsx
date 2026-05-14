@@ -10,7 +10,7 @@ function HeroPagesMockup() {
   const tilt = reduce ? 0 : -3;
   return (
     <div
-      className="relative mx-auto aspect-[5/6] w-full max-w-md rounded-3xl p-6 md:p-10"
+      className="relative mx-auto aspect-5/6 w-full max-w-md rounded-3xl p-6 md:p-10"
       style={{ background: "var(--accent-soft)" }}
     >
       {/* back page */}
@@ -171,7 +171,7 @@ export function Hero() {
 
           <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <ButtonLink href={CHECKOUT_URL} size="lg" className="group">
-              Get instant access — ₹499
+              Get instant access — ₹149
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
             </ButtonLink>
             <a

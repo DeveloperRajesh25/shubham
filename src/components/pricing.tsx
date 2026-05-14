@@ -10,9 +10,9 @@ const features = [
   "10,000+ printable worksheets across 12 categories",
   "40+ skill-mapped developmental areas",
   "Lifetime access — unlimited downloads",
-  "Free quarterly updates (200+ new sheets per quarter)",
   "Print at home, school, or anywhere",
-  "30-day no-questions money-back guarantee",
+  "PDF format, easy to print — A4 & US Letter size",
+  "Instant delivery via Google Drive download link",
 ];
 
 export function Pricing() {
@@ -59,10 +59,10 @@ export function Pricing() {
 
         <div className="mt-8 flex items-baseline justify-center gap-3">
           <span className="text-xl text-muted-foreground line-through">
-            ₹1,999
+            ₹599
           </span>
           <span className="font-display text-7xl leading-none text-foreground md:text-8xl">
-            ₹499
+            ₹149
           </span>
         </div>
         <p className="mt-3 text-center text-sm text-muted-foreground">
@@ -88,12 +88,12 @@ export function Pricing() {
           size="lg"
           className="mt-10 w-full justify-center group"
         >
-          Get instant access — ₹499
+          Get instant access — ₹149
           <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
         </ButtonLink>
 
         <p className="mt-5 text-center text-xs text-muted-foreground">
-          Secure checkout · Instant PDF delivery · 30-day refund
+          Secure checkout · Instant PDF delivery · Google Drive access
         </p>
       </motion.div>
     </section>

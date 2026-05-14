@@ -40,11 +40,11 @@ export function FinalCTA() {
           className="mt-10 flex flex-col items-center"
         >
           <ButtonLink href={CHECKOUT_URL} size="lg" className="group">
-            Get the bundle — ₹499
+            Get the bundle — ₹149
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </ButtonLink>
           <p className="mt-5 text-xs text-foreground/60">
-            30-day refund · Lifetime access · Instant download
+            Secure checkout · Lifetime access · Instant download
           </p>
         </motion.div>
       </div>

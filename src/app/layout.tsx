@@ -17,13 +17,13 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://brightpages.example.com"),
-  title: "Brightpages — 10,000+ printable worksheets for kids 2–8",
+  title: "Brightpages — 10,000+ printable worksheets for kids 2–9",
   description:
-    "The screen-free way your kid actually wants to learn. Skill-mapped worksheets in 12 categories. Lifetime access for ₹499.",
+    "The screen-free way your kid actually wants to learn. Skill-mapped worksheets in 12 categories. Lifetime access for ₹149.",
   openGraph: {
     title: "Brightpages — Printable worksheets kids actually want to do",
     description:
-      "10,000+ educator-designed worksheets. Lifetime access. ₹499 one-time.",
+      "10,000+ educator-designed worksheets. Lifetime access. ₹149 one-time.",
     images: ["/og-image.png"],
     type: "website",
   },
@@ -46,7 +46,7 @@ const productSchema = {
   brand: { "@type": "Brand", name: "Brightpages" },
   offers: {
     "@type": "Offer",
-    price: "499",
+    price: "149",
     priceCurrency: "INR",
     availability: "https://schema.org/InStock",
   },

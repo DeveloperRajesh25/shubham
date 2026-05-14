@@ -11,36 +11,36 @@ import {
 
 const faqs = [
   {
-    q: "Is this a one-time payment or a subscription?",
-    a: "One-time. Pay ₹499 once, access for life. No recurring charges, ever.",
+    q: "Is this a physical product?",
+    a: "No. This is a digital product only. No physical items will be shipped.",
+  },
+  {
+    q: "How will I receive the product?",
+    a: "This is a digital download. You'll get an email with a Google Drive link to download your files instantly!",
+  },
+  {
+    q: "What format are the files in?",
+    a: "PDF format, easy to print.",
+  },
+  {
+    q: "What paper size is supported?",
+    a: "Printable in A4 & US Letter size.",
+  },
+  {
+    q: "Can I print multiple times?",
+    a: "Yes, unlimited printing for personal or classroom use.",
   },
   {
     q: "What ages is this for?",
-    a: "Designed for kids 2–8. Each worksheet is labeled 2–3, 4–5, or 6–8 so you can pick the right level.",
+    a: "These worksheets are designed for children aged 2–9 years, but learning pace may vary for each child.",
   },
   {
-    q: "Do I need a printer at home?",
-    a: "Helpful but not required. Many parents print at the local stationery shop (₹1–2 per page) or use the worksheets digitally on a tablet with a stylus.",
+    q: "Is there a refund?",
+    a: "No refunds on digital products. Due to the nature of digital downloads, all sales are final once files are delivered. However, if you face any issues downloading or opening the files, please contact us and we'll be happy to help.",
   },
   {
-    q: "What format are the files?",
-    a: "Standard PDFs, A4 sized, ink-friendly. Open on any phone, tablet, laptop, or printer.",
-  },
-  {
-    q: "What if my child outgrows the bundle?",
-    a: "The bundle covers up to age 8. Quarterly updates also extend the range — and you keep lifetime access.",
-  },
-  {
-    q: "Can I share this with another parent?",
-    a: "The license is for one family or one classroom. We trust you.",
-  },
-  {
-    q: "Is there a refund policy?",
-    a: "Yes — 30 days, no questions asked. Email us and we'll process the refund.",
-  },
-  {
-    q: "How is this different from free worksheets online?",
-    a: "Free worksheets are scattered, inconsistent in quality, and not skill-mapped. Ours are sequenced, age-graded, and built by certified educators. Most parents tell us they spent more time hunting for free PDFs than the ₹499 we charge.",
+    q: "Need help?",
+    a: "Contact us if you face any download issues. We're happy to assist with any technical problems.",
   },
 ];
 

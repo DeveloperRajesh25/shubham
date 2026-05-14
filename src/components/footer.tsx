@@ -46,10 +46,9 @@ const cols = [
   {
     title: "Legal",
     links: [
-      { href: "#", label: "Privacy" },
-      { href: "#", label: "Terms" },
-      { href: "#", label: "Refund policy" },
-      { href: "#", label: "Shipping (Instant download)" },
+      { href: "/privacy", label: "Privacy Policy" },
+      { href: "/terms", label: "Terms & Conditions" },
+      { href: "/refund", label: "Refund Policy" },
     ],
   },
 ];

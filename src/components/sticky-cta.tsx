@@ -33,9 +33,9 @@ export function StickyCTA() {
         >
           <div className="flex items-center justify-between gap-3 rounded-full border border-border bg-card p-2 pl-5">
             <div className="flex items-baseline gap-2 text-sm">
-              <span className="font-display text-xl text-foreground">₹499</span>
+              <span className="font-display text-xl text-foreground">₹149</span>
               <span className="text-xs text-muted-foreground line-through">
-                ₹1,999
+                ₹599
               </span>
             </div>
             <a
