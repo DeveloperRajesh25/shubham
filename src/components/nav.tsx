@@ -65,7 +65,13 @@ export function Nav() {
         </nav>
 
         <div className="hidden md:block">
-          <ButtonLink href={CHECKOUT_URL} size="md" className="group">
+          <ButtonLink
+            href={CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            size="md"
+            className="group"
+          >
             Get the Bundle
             <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
           </ButtonLink>
@@ -101,6 +107,8 @@ export function Nav() {
           <div className="mt-auto px-6 pb-10">
             <ButtonLink
               href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               size="lg"
               className="w-full justify-center group"
             >

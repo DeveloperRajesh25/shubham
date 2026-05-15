@@ -39,7 +39,13 @@ export function FinalCTA() {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="mt-10 flex flex-col items-center"
         >
-          <ButtonLink href={CHECKOUT_URL} size="lg" className="group">
+          <ButtonLink
+            href={CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            size="lg"
+            className="group"
+          >
             Get the bundle — ₹149
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </ButtonLink>

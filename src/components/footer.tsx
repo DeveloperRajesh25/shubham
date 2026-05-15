@@ -36,14 +36,6 @@ const cols = [
     ],
   },
   {
-    title: "Company",
-    links: [
-      { href: "#", label: "About" },
-      { href: "#", label: "Contact" },
-      { href: "#", label: "Blog" },
-    ],
-  },
-  {
     title: "Legal",
     links: [
       { href: "/privacy", label: "Privacy Policy" },
@@ -57,7 +49,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-3">
           <div className="col-span-2 md:col-span-1">
             <div className="font-display text-2xl tracking-tight text-foreground">
               {BRAND_NAME}
@@ -115,6 +107,23 @@ export function Footer() {
               <YoutubeIcon className="h-4 w-4" />
             </a>
           </div>
+        </div>
+
+        <div className="mt-6 flex justify-center border-t border-border pt-6 md:justify-start">
+          <a
+            href="https://webcros.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Developed by{" "}
+            <span
+              className="font-medium underline-offset-4 group-hover:underline"
+              style={{ color: "var(--accent)" }}
+            >
+              webcros
+            </span>
+          </a>
         </div>
       </div>
     </footer>

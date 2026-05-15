@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
-import { Star } from "lucide-react";
+import { Star, MessageCircle } from "lucide-react";
 import { Eyebrow } from "@/components/ui/eyebrow";
 
 interface Review {
@@ -49,6 +50,24 @@ const reviews: Review[] = [
   },
 ];
 
+const chatScreens = [
+  {
+    src: "/images/whatsapp-testimonials/1.jpeg",
+    alt: "WhatsApp message from Priya Sharma — Count & Match worksheet feedback",
+    caption: "Priya Sharma · son aged 4",
+  },
+  {
+    src: "/images/whatsapp-testimonials/2.jpeg",
+    alt: "WhatsApp message from Ankita Verma — Shape Tracing worksheet feedback",
+    caption: "Ankita Verma · child aged 4",
+  },
+  {
+    src: "/images/whatsapp-testimonials/3.jpeg",
+    alt: "WhatsApp message from Neha — Alphabet, Counting, and Tracing worksheet feedback",
+    caption: "Neha (Mom) · child aged 5",
+  },
+];
+
 export function Testimonials() {
   return (
     <section
@@ -68,7 +87,64 @@ export function Testimonials() {
         </motion.h2>
       </div>
 
-      <div className="mt-12 grid grid-cols-1 gap-4 md:mt-16 md:grid-cols-2 lg:grid-cols-3">
+      {/* WhatsApp screenshots — real parent chats */}
+      <div className="mt-12 md:mt-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground"
+        >
+          <MessageCircle
+            className="h-3.5 w-3.5"
+            style={{ color: "var(--accent)" }}
+            aria-hidden
+          />
+          Straight from the WhatsApp inbox
+        </motion.div>
+
+        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+          {chatScreens.map((c, i) => (
+            <motion.figure
+              key={c.src}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{
+                duration: 0.5,
+                delay: i * 0.1,
+                ease: "easeOut",
+              }}
+              className="group overflow-hidden rounded-2xl border border-border bg-card p-3 transition-all hover:border-foreground/40 hover:-translate-y-0.5"
+            >
+              <div className="relative aspect-9/16 w-full overflow-hidden rounded-xl bg-background">
+                <Image
+                  src={c.src}
+                  alt={c.alt}
+                  fill
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 320px"
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption className="mt-3 flex items-center justify-between px-2 pb-1 text-xs text-muted-foreground">
+                <span className="italic">{c.caption}</span>
+                <span
+                  className="inline-flex items-center gap-1 font-medium"
+                  style={{ color: "var(--accent)" }}
+                >
+                  <MessageCircle className="h-3 w-3" aria-hidden />
+                  Verified DM
+                </span>
+              </figcaption>
+            </motion.figure>
+          ))}
+        </div>
+      </div>
+
+      {/* Written reviews */}
+      <div className="mt-16 grid grid-cols-1 gap-4 md:mt-20 md:grid-cols-2 lg:grid-cols-3">
         {reviews.map((r, i) => (
           <motion.figure
             key={r.name + i}

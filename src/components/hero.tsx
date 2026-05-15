@@ -1,121 +1,54 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import { ArrowRight, ArrowDown, Star } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
 import { CHECKOUT_URL } from "@/lib/config";
 
-function HeroPagesMockup() {
+function HeroBundleShowcase() {
   const reduce = useReducedMotion();
-  const tilt = reduce ? 0 : -3;
   return (
     <div
-      className="relative mx-auto aspect-5/6 w-full max-w-md rounded-3xl p-6 md:p-10"
+      className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-3xl p-4 md:p-8"
       style={{ background: "var(--accent-soft)" }}
     >
-      {/* back page */}
+      {/* Secondary box — behind, rotated */}
       <motion.div
-        initial={{ opacity: 0, y: 24, rotate: 6 }}
-        animate={{ opacity: 1, y: 0, rotate: 6 }}
-        transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-        className="absolute left-1/2 top-1/2 h-[78%] w-[68%] -translate-x-1/2 -translate-y-1/2 rounded-xl border border-border bg-card shadow-sm"
+        initial={{ opacity: 0, x: 40, y: 20, rotate: 10 }}
+        animate={{ opacity: 1, x: 0, y: 0, rotate: 8 }}
+        transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
+        className="absolute right-2 top-1/2 h-[70%] w-[55%] -translate-y-1/2 overflow-hidden rounded-xl shadow-md"
         aria-hidden
       >
-        <PageContent variant="numbers" />
+        <Image
+          src="/images/book-poster-2.jpeg"
+          alt=""
+          fill
+          sizes="(max-width: 768px) 50vw, 300px"
+          className="object-cover"
+          priority
+        />
       </motion.div>
-      {/* middle page */}
-      <motion.div
-        initial={{ opacity: 0, y: 18, rotate: -4 }}
-        animate={{ opacity: 1, y: 0, rotate: -4 }}
-        transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-        className="absolute left-1/2 top-1/2 h-[80%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-xl border border-border bg-card shadow-sm"
-        aria-hidden
-      >
-        <PageContent variant="alphabet" />
-      </motion.div>
-      {/* top page (interactive tilt) */}
-      <motion.div
-        initial={{ opacity: 0, y: 12, rotate: tilt }}
-        animate={{ opacity: 1, y: 0, rotate: tilt }}
-        whileHover={reduce ? undefined : { rotate: 0 }}
-        transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-        className="absolute left-1/2 top-1/2 h-[82%] w-[72%] -translate-x-1/2 -translate-y-1/2 rounded-xl border border-border bg-card shadow-md"
-        aria-label="Worksheet preview"
-      >
-        <PageContent variant="tracing" />
-      </motion.div>
-    </div>
-  );
-}
 
-function PageContent({
-  variant,
-}: {
-  variant: "tracing" | "alphabet" | "numbers";
-}) {
-  if (variant === "tracing") {
-    return (
-      <div className="flex h-full flex-col px-5 py-6">
-        <div className="mb-3 flex items-center justify-between">
-          <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
-            Tracing · Age 4–5
-          </span>
-          <span className="font-display text-base text-foreground">a</span>
-        </div>
-        <div className="font-display text-3xl leading-none text-foreground">
-          Trace the letter
-        </div>
-        <div className="mt-4 grid flex-1 grid-cols-3 gap-2">
-          {Array.from({ length: 9 }).map((_, i) => (
-            <div
-              key={i}
-              className="flex items-center justify-center rounded border border-dashed border-border text-3xl text-muted-foreground/40"
-              style={{ fontFamily: "var(--font-instrument-serif)" }}
-            >
-              a
-            </div>
-          ))}
-        </div>
-        <div className="mt-3 h-1 w-12 rounded-full" style={{ background: "var(--accent)" }} />
-      </div>
-    );
-  }
-  if (variant === "alphabet") {
-    return (
-      <div className="flex h-full flex-col px-5 py-6">
-        <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
-          Alphabet · Age 2–3
-        </span>
-        <div className="mt-2 font-display text-2xl">A is for…</div>
-        <div className="mt-4 grid flex-1 grid-cols-2 gap-2">
-          {["Apple", "Ant", "Axe", "Arc"].map((w) => (
-            <div
-              key={w}
-              className="flex items-center justify-center rounded border border-border bg-background/40 text-xs text-muted-foreground"
-            >
-              {w}
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
-  return (
-    <div className="flex h-full flex-col px-5 py-6">
-      <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
-        Counting · Age 4–5
-      </span>
-      <div className="mt-2 font-display text-2xl">Count to ten</div>
-      <div className="mt-4 grid flex-1 grid-cols-5 gap-2">
-        {Array.from({ length: 10 }).map((_, i) => (
-          <div
-            key={i}
-            className="flex items-center justify-center rounded border border-border text-sm text-muted-foreground"
-          >
-            {i + 1}
-          </div>
-        ))}
-      </div>
+      {/* Primary box — front and centre */}
+      <motion.div
+        initial={{ opacity: 0, y: 20, rotate: -4 }}
+        animate={{ opacity: 1, y: 0, rotate: -3 }}
+        whileHover={reduce ? undefined : { rotate: 0, scale: 1.02 }}
+        transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
+        className="absolute left-2 top-1/2 h-[88%] w-[72%] -translate-y-1/2 overflow-hidden rounded-2xl bg-white shadow-xl"
+        aria-label="Kids Worksheets Bundle — printable mega bundle"
+      >
+        <Image
+          src="/images/book-poster-1.jpeg"
+          alt="14,000+ Kids Worksheets — Ultimate Mega Learning Bundle"
+          fill
+          sizes="(max-width: 768px) 80vw, 400px"
+          className="object-cover"
+          priority
+        />
+      </motion.div>
     </div>
   );
 }
@@ -170,7 +103,13 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <ButtonLink href={CHECKOUT_URL} size="lg" className="group">
+            <ButtonLink
+              href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              size="lg"
+              className="group"
+            >
               Get instant access — ₹149
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
             </ButtonLink>
@@ -210,7 +149,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
           className="order-1 md:order-2"
         >
-          <HeroPagesMockup />
+          <HeroBundleShowcase />
         </motion.div>
       </div>
     </section>
