@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, BookOpen } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
 import { CHECKOUT_URL, BRAND_NAME } from "@/lib/config";
 import { cn } from "@/lib/utils";
 
 const links = [
   { href: "#whats-inside", label: "What's Inside" },
-  { href: "#skills", label: "Skills" },
+  { href: "#how", label: "How It Works" },
   { href: "#reviews", label: "Reviews" },
   { href: "#faq", label: "FAQ" },
 ];
@@ -40,24 +40,27 @@ export function Nav() {
       className={cn(
         "sticky top-0 z-40 w-full transition-all duration-300",
         scrolled
-          ? "backdrop-blur-md bg-background/80 border-b border-border"
+          ? "backdrop-blur-md bg-white/90 border-b border-border shadow-sm"
           : "bg-transparent border-b border-transparent",
       )}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <a
           href="#top"
-          className="font-display text-2xl tracking-tight text-foreground"
+          className="flex items-center gap-2 font-extrabold text-xl tracking-tight text-foreground"
         >
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--accent)] text-white">
+            <BookOpen className="h-4 w-4" />
+          </span>
           {BRAND_NAME}
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-7 md:flex" aria-label="Primary">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm font-medium text-foreground/70 transition-colors hover:text-[var(--accent)]"
             >
               {l.label}
             </a>
@@ -72,13 +75,13 @@ export function Nav() {
             size="md"
             className="group"
           >
-            Get the Bundle
+            Get Bundle — ₹149
             <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
           </ButtonLink>
         </div>
 
         <button
-          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full text-foreground hover:bg-foreground/5 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground"
+          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full text-foreground hover:bg-foreground/5 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
@@ -98,7 +101,7 @@ export function Nav() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setMobileOpen(false)}
-                className="font-display text-3xl text-foreground py-2"
+                className="font-bold text-2xl text-foreground py-2"
               >
                 {l.label}
               </a>
@@ -112,7 +115,7 @@ export function Nav() {
               size="lg"
               className="w-full justify-center group"
             >
-              Get the Bundle
+              Get Bundle — ₹149
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </ButtonLink>
           </div>

@@ -1,124 +1,98 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion, useInView, animate } from "motion/react";
+import { motion } from "motion/react";
+import { Brain, Moon, Activity, GraduationCap } from "lucide-react";
 import { Eyebrow } from "@/components/ui/eyebrow";
 
-interface Stat {
-  value: string;
-  numericPart: number | null;
-  suffix?: string;
-  label: string;
-}
-
-const stats: Stat[] = [
+const problems = [
   {
-    value: "45 min",
-    numericPart: 45,
-    suffix: " min",
-    label: "average daily screen time gained back per child",
+    icon: Brain,
+    title: "Mental Health Issues",
+    description:
+      "Excessive screen time leads to anxiety, irritability, and shorter attention spans in young children.",
+    color: "#DC2626",
+    bg: "#FEE2E2",
   },
   {
-    value: "0 prep",
-    numericPart: 0,
-    suffix: " prep",
-    label: "no laminating, no Pinterest scrolling, no last-minute searching",
+    icon: Activity,
+    title: "Physical Health Problems",
+    description:
+      "Eye strain, poor posture, and obesity from prolonged device usage stack up fast.",
+    color: "#EA580C",
+    bg: "#FFEDD5",
   },
   {
-    value: "1 click",
-    numericPart: 1,
-    suffix: " click",
-    label: "download once, print whenever, forever",
+    icon: Moon,
+    title: "Disrupted Sleep Quality",
+    description:
+      "Blue light affects melatonin production, causing real sleep disorders in kids.",
+    color: "#7C3AED",
+    bg: "#EDE9FE",
+  },
+  {
+    icon: GraduationCap,
+    title: "Poor Academic Performance",
+    description:
+      "Children addicted to phones struggle with focus, leading to declining grades.",
+    color: "#0891B2",
+    bg: "#CFFAFE",
   },
 ];
 
-function CountUp({
-  to,
-  suffix = "",
-  inView,
-}: {
-  to: number;
-  suffix?: string;
-  inView: boolean;
-}) {
-  const [val, setVal] = useState(0);
-  useEffect(() => {
-    if (!inView) return;
-    const controls = animate(0, to, {
-      duration: 1.2,
-      ease: "easeOut",
-      onUpdate: (latest) => setVal(Math.round(latest)),
-    });
-    return () => controls.stop();
-  }, [inView, to]);
-  return (
-    <>
-      {val}
-      {suffix}
-    </>
-  );
-}
-
 export function Problem() {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section className="mx-auto max-w-3xl px-6 py-24 md:py-32">
+    <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
       <div className="text-center">
-        <Eyebrow className="justify-center">The parent problem</Eyebrow>
+        <Eyebrow color="accent">The parent problem</Eyebrow>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="font-display mt-5 text-4xl leading-[1.05] tracking-tight text-foreground md:text-5xl"
+          className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl"
         >
-          You didn&apos;t sign up to be a content negotiator with a 4-year-old.
+          Turn Screen Time Into{" "}
+          <span className="text-accent">Your Child&apos;s Future</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-          className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground md:text-lg leading-relaxed"
+          className="mx-auto mt-4 max-w-2xl text-base text-foreground/70 md:text-lg"
         >
-          Screens won the easy game. But you know the cost — shorter attention
-          spans, tantrums when devices are taken away, learning that doesn&apos;t
-          stick. The alternative — finding fresh, engaging activities every
-          single day — is a part-time job nobody asked for.
+          The hidden dangers of mobile phone addiction in children — and what
+          you can do about it today.
         </motion.p>
       </div>
 
-      <div
-        ref={ref}
-        className="mt-16 grid grid-cols-1 gap-6 md:mt-20 md:grid-cols-3"
-      >
-        {stats.map((s, i) => (
-          <motion.div
-            key={s.label}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: i * 0.08, ease: "easeOut" }}
-            className="rounded-2xl border border-border bg-card p-6 md:p-8 text-left transition-colors hover:border-foreground/40"
-          >
-            <div className="font-display text-5xl leading-none text-foreground md:text-6xl">
-              {s.numericPart !== null ? (
-                <CountUp
-                  to={s.numericPart}
-                  suffix={s.suffix}
-                  inView={inView}
-                />
-              ) : (
-                s.value
-              )}
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-              {s.label}
-            </p>
-          </motion.div>
-        ))}
+      <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {problems.map((p, i) => {
+          const Icon = p.icon;
+          return (
+            <motion.div
+              key={p.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
+              className="group rounded-2xl border-2 border-border bg-white p-5 transition-all hover:-translate-y-1 hover:shadow-lg"
+            >
+              <div
+                className="flex h-12 w-12 items-center justify-center rounded-xl"
+                style={{ background: p.bg, color: p.color }}
+              >
+                <Icon className="h-6 w-6" />
+              </div>
+              <h3 className="mt-4 text-lg font-bold text-foreground">
+                {p.title}
+              </h3>
+              <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                {p.description}
+              </p>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );

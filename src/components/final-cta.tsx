@@ -1,57 +1,81 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck, Zap, Download } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
 import { CHECKOUT_URL } from "@/lib/config";
 
 export function FinalCTA() {
   return (
     <section
-      className="px-6 py-24 md:py-32"
-      style={{ background: "var(--accent-soft)" }}
+      className="relative overflow-hidden px-6 py-16 md:py-24"
+      style={{
+        background:
+          "linear-gradient(135deg, #EA580C 0%, #DC2626 100%)",
+      }}
     >
-      <div className="mx-auto max-w-3xl text-center">
+      <div className="mx-auto max-w-3xl text-center text-white">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-extrabold uppercase tracking-wider backdrop-blur">
+          🔥 Limited Time Offer
+        </span>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="font-display text-5xl leading-[1.05] tracking-tight text-foreground md:text-7xl"
+          className="mt-4 text-4xl font-extrabold leading-tight tracking-tight md:text-6xl"
         >
-          Less screens. More serifs.{" "}
-          <span className="italic">More sense of accomplishment.</span>
+          Unlock Your Child&apos;s{" "}
+          <span className="text-highlight">Bright Future</span> Today!
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-          className="mx-auto mt-8 max-w-xl text-base md:text-lg text-foreground/80 leading-relaxed"
+          className="mx-auto mt-5 max-w-xl text-base text-white/90 md:text-lg"
         >
-          Join 32,000+ parents who replaced one daily tantrum with one daily
-          worksheet.
+          Join 32,000+ parents who replaced screen time with real learning.
+          Lifetime access, instant delivery, 30-day money-back guarantee.
         </motion.p>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="mt-10 flex flex-col items-center"
+          className="mt-8 flex flex-col items-center gap-4"
         >
+          <div className="flex items-baseline justify-center gap-3 text-white">
+            <span className="text-xl line-through opacity-60">₹599</span>
+            <span className="text-5xl font-extrabold md:text-6xl">₹149</span>
+            <span className="rounded-full bg-highlight px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-foreground">
+              75% OFF
+            </span>
+          </div>
+
           <ButtonLink
             href={CHECKOUT_URL}
             target="_blank"
             rel="noopener noreferrer"
-            size="lg"
-            className="group"
+            size="xl"
+            className="group bg-white text-accent-strong hover:bg-white/90"
           >
-            Get the bundle — ₹149
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            GET KIDS WORKSHEETS NOW
+            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </ButtonLink>
-          <p className="mt-5 text-xs text-foreground/60">
-            Secure checkout · Lifetime access · Instant download
-          </p>
+
+          <div className="mt-2 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-white/90">
+            <span className="inline-flex items-center gap-1">
+              <ShieldCheck className="h-3.5 w-3.5" /> 30-day money-back
+            </span>
+            <span className="inline-flex items-center gap-1">
+              <Zap className="h-3.5 w-3.5" /> Instant delivery
+            </span>
+            <span className="inline-flex items-center gap-1">
+              <Download className="h-3.5 w-3.5" /> Lifetime access
+            </span>
+          </div>
         </motion.div>
       </div>
     </section>

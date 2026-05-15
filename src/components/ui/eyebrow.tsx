@@ -3,23 +3,27 @@ import { cn } from "@/lib/utils";
 export function Eyebrow({
   children,
   className,
+  color = "accent",
 }: {
   children: React.ReactNode;
   className?: string;
+  color?: "accent" | "success" | "highlight";
 }) {
+  const palette: Record<string, { bg: string; fg: string }> = {
+    accent: { bg: "var(--accent-soft)", fg: "var(--accent)" },
+    success: { bg: "var(--success-soft)", fg: "var(--success)" },
+    highlight: { bg: "var(--highlight-soft)", fg: "#854D0E" },
+  };
+  const c = palette[color];
   return (
-    <p
+    <span
       className={cn(
-        "flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground",
+        "inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide",
         className,
       )}
+      style={{ background: c.bg, color: c.fg }}
     >
-      <span
-        aria-hidden
-        className="inline-block h-1.5 w-1.5 rounded-full"
-        style={{ background: "var(--accent)" }}
-      />
       {children}
-    </p>
+    </span>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { MessageCircle } from "lucide-react";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import {
   Accordion,
@@ -11,52 +12,44 @@ import {
 
 const faqs = [
   {
-    q: "Is this a physical product?",
-    a: "No. This is a digital product only. No physical items will be shipped.",
+    q: "Is this a digital or physical product?",
+    a: "100% digital. No physical items will be shipped — you get instant access to all 10,000+ worksheets in PDF format delivered to your inbox within minutes of purchase.",
   },
   {
-    q: "How will I receive the product?",
-    a: "This is a digital download. You'll get an email with a Google Drive link to download your files instantly!",
-  },
-  {
-    q: "What format are the files in?",
-    a: "PDF format, easy to print.",
-  },
-  {
-    q: "What paper size is supported?",
-    a: "Printable in A4 & US Letter size.",
-  },
-  {
-    q: "Can I print multiple times?",
-    a: "Yes, unlimited printing for personal or classroom use.",
+    q: "How will I receive the worksheets?",
+    a: "You'll get an email with a Google Drive link to download all your files instantly. Open the link, download the PDFs, and you're ready to print.",
   },
   {
     q: "What ages is this for?",
-    a: "These worksheets are designed for children aged 2–9 years, but learning pace may vary for each child.",
+    a: "Designed for children aged 2–9 years. Each worksheet is age-graded so you always know what's right for your child.",
   },
   {
-    q: "Is there a refund?",
-    a: "No refunds on digital products. Due to the nature of digital downloads, all sales are final once files are delivered. However, if you face any issues downloading or opening the files, please contact us and we'll be happy to help.",
+    q: "Do I need special skills to use these worksheets?",
+    a: "No special skills required! Simply download, print on regular paper, and hand to your child. Each worksheet comes with clear instructions.",
   },
   {
-    q: "Need help?",
-    a: "Contact us if you face any download issues. We're happy to assist with any technical problems.",
+    q: "Can I print in black & white or do I need color?",
+    a: "Both work perfectly! Color printing makes worksheets more engaging, but black & white is completely fine and saves ink costs.",
+  },
+  {
+    q: "What if I'm not satisfied?",
+    a: "Not happy with your purchase? Get a full refund within 30 days, no questions asked.",
   },
 ];
 
 export function FAQ() {
   return (
-    <section id="faq" className="mx-auto max-w-3xl px-6 py-24 md:py-32">
-      <div>
-        <Eyebrow>Common questions</Eyebrow>
+    <section id="faq" className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+      <div className="text-center">
+        <Eyebrow color="accent">Got questions?</Eyebrow>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="font-display mt-5 text-4xl leading-[1.05] tracking-tight text-foreground md:text-5xl"
+          className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl"
         >
-          Everything you might be wondering.
+          Frequently Asked <span className="text-accent">Questions</span>
         </motion.h2>
       </div>
 
@@ -65,17 +58,32 @@ export function FAQ() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-        className="mt-12 border-t border-border"
+        className="mt-10 overflow-hidden rounded-2xl border-2 border-border bg-white"
       >
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((f, i) => (
-            <AccordionItem key={i} value={`item-${i}`}>
+            <AccordionItem key={i} value={`item-${i}`} className="px-5">
               <AccordionTrigger>{f.q}</AccordionTrigger>
               <AccordionContent>{f.a}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
       </motion.div>
+
+      <div className="mt-8 flex flex-col items-center gap-3 rounded-2xl bg-success-soft p-6 text-center">
+        <p className="text-sm font-bold text-foreground">
+          Need help? Talk to us on WhatsApp
+        </p>
+        <a
+          href="https://wa.me/919611563472"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-5 py-2.5 text-sm font-bold text-white shadow-md transition-all hover:brightness-105"
+        >
+          <MessageCircle className="h-4 w-4" />
+          Chat on WhatsApp (+91 96115 63472)
+        </a>
+      </div>
     </section>
   );
 }

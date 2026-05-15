@@ -1,3 +1,4 @@
+import { BookOpen } from "lucide-react";
 import { BRAND_NAME } from "@/lib/config";
 
 function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -31,7 +32,7 @@ const cols = [
     links: [
       { href: "#whats-inside", label: "What's inside" },
       { href: "#pricing", label: "Pricing" },
-      { href: "#preview", label: "Sample worksheets" },
+      { href: "#preview", label: "Samples" },
       { href: "#faq", label: "FAQ" },
     ],
   },
@@ -47,29 +48,32 @@ const cols = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-16">
+    <footer className="border-t-2 border-border bg-white">
+      <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-3">
           <div className="col-span-2 md:col-span-1">
-            <div className="font-display text-2xl tracking-tight text-foreground">
+            <div className="flex items-center gap-2 text-xl font-extrabold tracking-tight text-foreground">
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-white">
+                <BookOpen className="h-4 w-4" />
+              </span>
               {BRAND_NAME}
             </div>
-            <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+            <p className="mt-3 text-sm text-foreground/60 leading-relaxed">
               Printable worksheets kids actually want to do.
             </p>
           </div>
 
           {cols.map((col) => (
             <div key={col.title}>
-              <h3 className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              <h3 className="text-xs font-extrabold uppercase tracking-wider text-accent">
                 {col.title}
               </h3>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-4 space-y-2.5">
                 {col.links.map((l) => (
                   <li key={l.label}>
                     <a
                       href={l.href}
-                      className="text-sm text-foreground hover:text-foreground/60 transition-colors"
+                      className="text-sm font-medium text-foreground hover:text-accent transition-colors"
                     >
                       {l.label}
                     </a>
@@ -80,47 +84,32 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col items-start gap-4 border-t border-border pt-8 md:flex-row md:items-center md:justify-between">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-10 flex flex-col items-start gap-4 border-t border-border pt-6 md:flex-row md:items-center md:justify-between">
+          <p className="text-sm text-foreground/60">
             © 2026 {BRAND_NAME}. Made for curious kids and tired parents.
           </p>
-          <div className="flex items-center gap-4">
-            <a
-              href="#"
-              aria-label="Instagram"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
+          <div className="flex items-center gap-3">
+            <a href="#" aria-label="Instagram" className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-accent transition-colors hover:bg-accent hover:text-white">
               <InstagramIcon className="h-4 w-4" />
             </a>
-            <a
-              href="#"
-              aria-label="Facebook"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
+            <a href="#" aria-label="Facebook" className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-accent transition-colors hover:bg-accent hover:text-white">
               <FacebookIcon className="h-4 w-4" />
             </a>
-            <a
-              href="#"
-              aria-label="YouTube"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
+            <a href="#" aria-label="YouTube" className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-accent transition-colors hover:bg-accent hover:text-white">
               <YoutubeIcon className="h-4 w-4" />
             </a>
           </div>
         </div>
 
-        <div className="mt-6 flex justify-center border-t border-border pt-6 md:justify-start">
+        <div className="mt-5 flex justify-center border-t border-border pt-4 md:justify-start">
           <a
             href="https://webcros.in"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground"
+            className="group inline-flex items-center gap-1.5 text-xs text-foreground/60 transition-colors hover:text-foreground"
           >
             Developed by{" "}
-            <span
-              className="font-medium underline-offset-4 group-hover:underline"
-              style={{ color: "var(--accent)" }}
-            >
+            <span className="font-bold text-accent underline-offset-4 group-hover:underline">
               webcros
             </span>
           </a>

@@ -10,7 +10,6 @@ export function StickyCTA() {
 
   useEffect(() => {
     const onScroll = () => {
-      // Trigger after roughly the hero (90vh)
       setShow(window.scrollY > window.innerHeight * 0.85);
     };
     onScroll();
@@ -28,13 +27,15 @@ export function StickyCTA() {
           transition={{ duration: 0.3, ease: "easeOut" }}
           className="fixed inset-x-4 bottom-4 z-40 md:hidden"
           style={{
-            filter: "drop-shadow(0 12px 24px rgba(0,0,0,0.12))",
+            filter: "drop-shadow(0 12px 24px rgba(0,0,0,0.18))",
           }}
         >
-          <div className="flex items-center justify-between gap-3 rounded-full border border-border bg-card p-2 pl-5">
+          <div className="flex items-center justify-between gap-3 rounded-full border-2 border-accent bg-white p-2 pl-5">
             <div className="flex items-baseline gap-2 text-sm">
-              <span className="font-display text-xl text-foreground">₹149</span>
-              <span className="text-xs text-muted-foreground line-through">
+              <span className="text-xl font-extrabold text-accent-strong">
+                ₹149
+              </span>
+              <span className="text-xs text-foreground/60 line-through">
                 ₹599
               </span>
             </div>
@@ -42,9 +43,9 @@ export function StickyCTA() {
               href={CHECKOUT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-1.5 rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background transition-all hover:bg-foreground/90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2"
+              className="group inline-flex items-center gap-1.5 rounded-full bg-accent px-5 py-3 text-sm font-bold text-white shadow-md transition-all hover:bg-accent-hover active:scale-[0.98]"
             >
-              Get bundle
+              Get Bundle
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>

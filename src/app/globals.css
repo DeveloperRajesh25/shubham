@@ -1,16 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FAFAF7;
-  --foreground: #0A0A0A;
+  --background: #FFF8F0;
+  --foreground: #171717;
   --muted: #6B6B6B;
   --muted-foreground: #6B6B6B;
-  --border: #E8E6DF;
+  --border: #F1E4D3;
   --card: #FFFFFF;
-  --card-foreground: #0A0A0A;
-  --accent: #D97757;
-  --accent-soft: #F5E6DD;
-  --ring: #0A0A0A;
+  --card-foreground: #171717;
+  --accent: #EA580C;
+  --accent-hover: #C2410C;
+  --accent-soft: #FFEDD5;
+  --accent-strong: #DC2626;
+  --success: #16A34A;
+  --success-soft: #DCFCE7;
+  --whatsapp: #25D366;
+  --highlight: #FACC15;
+  --highlight-soft: #FEF9C3;
+  --ring: #EA580C;
 }
 
 @theme inline {
@@ -22,10 +29,17 @@
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
   --color-accent-soft: var(--accent-soft);
+  --color-accent-strong: var(--accent-strong);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-whatsapp: var(--whatsapp);
+  --color-highlight: var(--highlight);
+  --color-highlight-soft: var(--highlight-soft);
   --color-ring: var(--ring);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-instrument-serif), ui-serif, Georgia, serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 * {
@@ -53,14 +67,14 @@ section[id] {
 }
 
 ::selection {
-  background: var(--accent-soft);
-  color: var(--foreground);
+  background: var(--accent);
+  color: #fff;
 }
 
 .font-display {
-  font-family: var(--font-instrument-serif), ui-serif, Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.025em;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -82,6 +96,16 @@ section[id] {
 [data-state="open"] > .accordion-content { animation: accordion-down 220ms ease-out; }
 [data-state="closed"] > .accordion-content { animation: accordion-up 200ms ease-out; }
 
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.5); }
+  50% { box-shadow: 0 0 0 12px rgba(234, 88, 12, 0); }
+}
+
+.cta-glow {
+  animation: pulse-glow 2.4s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .cta-glow { animation: none; }
 }

@@ -1,49 +1,47 @@
 "use client";
 
 import { motion } from "motion/react";
+import { Users, Star, Download, ShieldCheck } from "lucide-react";
 
-const outlets = [
-  "Times of India",
-  "YourStory",
-  "The Better India",
-  "Indian Express",
+const stats = [
+  { icon: Users, value: "32,000+", label: "Happy parents" },
+  { icon: Star, value: "4.9 / 5", label: "Average rating" },
+  { icon: Download, value: "10,000+", label: "Worksheets included" },
+  { icon: ShieldCheck, value: "30-Day", label: "Money-back promise" },
 ];
 
 export function TrustStrip() {
   return (
     <section
-      aria-label="As featured in"
-      className="border-y border-border bg-background"
+      aria-label="Trust indicators"
+      className="border-y-2 border-accent-soft bg-white"
     >
-      <div className="mx-auto max-w-6xl px-6 py-8">
+      <div className="mx-auto max-w-6xl px-6 py-6">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center justify-center gap-4 text-muted-foreground sm:flex-row sm:flex-wrap"
+          className="grid grid-cols-2 gap-4 md:grid-cols-4"
         >
-          <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground/70">
-            Featured in
-          </span>
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-            {outlets.map((o, i) => (
-              <span key={o} className="flex items-center gap-8">
-                <span
-                  className="font-display text-lg tracking-tight text-foreground/30 transition-opacity duration-300 hover:text-foreground/80"
-                  style={{ letterSpacing: "-0.02em" }}
-                >
-                  {o}
+          {stats.map((s) => {
+            const Icon = s.icon;
+            return (
+              <div key={s.label} className="flex items-center gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent">
+                  <Icon className="h-5 w-5" />
                 </span>
-                {i < outlets.length - 1 && (
-                  <span
-                    aria-hidden
-                    className="hidden h-1 w-1 rounded-full bg-muted-foreground/40 sm:inline-block"
-                  />
-                )}
-              </span>
-            ))}
-          </div>
+                <div>
+                  <div className="text-lg font-extrabold text-foreground leading-none">
+                    {s.value}
+                  </div>
+                  <div className="mt-1 text-xs text-foreground/60">
+                    {s.label}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

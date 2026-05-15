@@ -1,18 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Instrument_Serif } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-instrument-serif",
-  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -32,7 +26,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#FAFAF7",
+  themeColor: "#EA580C",
   width: "device-width",
   initialScale: 1,
 };
@@ -61,7 +55,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable}`}>
+    <html lang="en" className={inter.variable}>
       <body className="antialiased">
         {children}
         <script

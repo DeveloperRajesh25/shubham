@@ -1,88 +1,97 @@
 "use client";
 
 import { motion } from "motion/react";
+import { Printer, BarChart3, Award } from "lucide-react";
 import { Eyebrow } from "@/components/ui/eyebrow";
 
-interface Step {
-  num: string;
-  title: string;
-  description: string;
-}
-
-const steps: Step[] = [
+const steps = [
   {
     num: "01",
-    title: "Order in 60s",
-    description: "Apple Pay, UPI, card. No account needed.",
+    icon: Printer,
+    title: "Print Worksheets",
+    description:
+      "Select from our massive library and print what your child needs for the day.",
+    color: "#EA580C",
+    bg: "#FFEDD5",
   },
   {
     num: "02",
-    title: "Instant access",
-    description: "Download link emailed + on-screen.",
+    icon: BarChart3,
+    title: "Track Progress",
+    description:
+      "Monitor your child's daily progress and engagement as they complete activities.",
+    color: "#0891B2",
+    bg: "#CFFAFE",
   },
   {
     num: "03",
-    title: "Print what you need",
-    description: "Full bundle, or one category at a time.",
-  },
-  {
-    num: "04",
-    title: "Hand it to your kid",
-    description: "And reclaim your evening.",
+    icon: Award,
+    title: "Reward Your Child",
+    description:
+      "Reward them with the included certificates to keep them excited and motivated!",
+    color: "#16A34A",
+    bg: "#DCFCE7",
   },
 ];
 
 export function HowItWorks() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
-      <div className="max-w-3xl">
-        <Eyebrow>How it works</Eyebrow>
+    <section id="how" className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <div className="mx-auto max-w-3xl text-center">
+        <Eyebrow color="accent">Easy steps</Eyebrow>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="font-display mt-5 text-4xl leading-[1.05] tracking-tight text-foreground md:text-5xl"
+          className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl"
         >
-          From order to first worksheet in 90 seconds.
+          3 Easy Steps to <span className="text-accent">Follow</span>
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          className="mx-auto mt-4 max-w-2xl text-base text-foreground/70 md:text-lg"
+        >
+          Get started with our 10,000+ worksheets in minutes.
+        </motion.p>
       </div>
 
-      <div className="relative mt-16">
-        {/* Horizontal connector line — desktop only */}
-        <div
-          className="absolute left-0 right-0 top-[26px] hidden h-px bg-border md:block"
-          aria-hidden
-        />
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-6">
-          {steps.map((s, i) => (
+      <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+        {steps.map((s, i) => {
+          const Icon = s.icon;
+          return (
             <motion.div
               key={s.num}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: i * 0.15, ease: "easeOut" }}
-              className="relative"
+              className="relative rounded-2xl border-2 border-border bg-white p-6 text-center transition-all hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="flex items-center gap-4 md:flex-col md:items-start md:gap-0">
-                <div
-                  className="font-display text-3xl leading-none text-foreground md:text-4xl bg-background pr-3 md:pr-0 relative z-10"
-                  style={{ width: "fit-content" }}
-                >
-                  {s.num}
-                </div>
-                <div className="md:mt-6 flex-1">
-                  <h3 className="text-xl font-medium text-foreground">
-                    {s.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                    {s.description}
-                  </p>
-                </div>
+              <span
+                className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-xs font-extrabold text-white"
+                style={{ background: s.color }}
+              >
+                STEP {s.num}
+              </span>
+              <div
+                className="mx-auto mt-2 flex h-16 w-16 items-center justify-center rounded-2xl"
+                style={{ background: s.bg, color: s.color }}
+              >
+                <Icon className="h-8 w-8" />
               </div>
+              <h3 className="mt-5 text-xl font-bold text-foreground">
+                {s.title}
+              </h3>
+              <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                {s.description}
+              </p>
             </motion.div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </section>
   );
