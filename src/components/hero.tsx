@@ -13,31 +13,12 @@ function HeroBundleShowcase() {
       className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-3xl p-4 md:p-8"
       style={{ background: "var(--accent-soft)" }}
     >
-      {/* Secondary box — behind, rotated */}
-      <motion.div
-        initial={{ opacity: 0, x: 40, y: 20, rotate: 10 }}
-        animate={{ opacity: 1, x: 0, y: 0, rotate: 8 }}
-        transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-        className="absolute right-2 top-1/2 h-[70%] w-[55%] -translate-y-1/2 overflow-hidden rounded-xl shadow-md"
-        aria-hidden
-      >
-        <Image
-          src="/images/book-poster-2.jpeg"
-          alt=""
-          fill
-          sizes="(max-width: 768px) 50vw, 300px"
-          className="object-cover"
-          priority
-        />
-      </motion.div>
-
-      {/* Primary box — front and centre */}
       <motion.div
         initial={{ opacity: 0, y: 20, rotate: -4 }}
         animate={{ opacity: 1, y: 0, rotate: -3 }}
         whileHover={reduce ? undefined : { rotate: 0, scale: 1.02 }}
         transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
-        className="absolute left-2 top-1/2 h-[88%] w-[72%] -translate-y-1/2 overflow-hidden rounded-2xl bg-white shadow-xl"
+        className="absolute left-1/2 top-1/2 h-[88%] w-[78%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-2xl bg-white shadow-xl"
         aria-label="Kids Worksheets Bundle — printable mega bundle"
       >
         <Image

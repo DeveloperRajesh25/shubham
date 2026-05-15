@@ -10,6 +10,7 @@ import { SkillsGrid } from "@/components/skills-grid";
 import { HowItWorks } from "@/components/how-it-works";
 import { Pricing } from "@/components/pricing";
 import { Testimonials } from "@/components/testimonials";
+import { Videos } from "@/components/videos";
 import { Comparison } from "@/components/comparison";
 import { FAQ } from "@/components/faq";
 import { FinalCTA } from "@/components/final-cta";
@@ -32,6 +33,7 @@ export default function Home() {
         <HowItWorks />
         <Pricing />
         <Testimonials />
+        <Videos />
         <Comparison />
         <FAQ />
         <FinalCTA />

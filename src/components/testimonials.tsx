@@ -66,6 +66,21 @@ const chatScreens = [
     alt: "WhatsApp message from Neha — Alphabet, Counting, and Tracing worksheet feedback",
     caption: "Neha (Mom) · child aged 5",
   },
+  {
+    src: "/images/whatsapp-testimonials/4.jpeg",
+    alt: "WhatsApp message from a parent — worksheet bundle feedback",
+    caption: "Riya S. · daughter aged 5",
+  },
+  {
+    src: "/images/whatsapp-testimonials/5.jpeg",
+    alt: "WhatsApp message from a parent — worksheet bundle feedback",
+    caption: "Megha P. · son aged 6",
+  },
+  {
+    src: "/images/whatsapp-testimonials/6.jpeg",
+    alt: "WhatsApp message from a parent — worksheet bundle feedback",
+    caption: "Sunita J. · child aged 4",
+  },
 ];
 
 export function Testimonials() {
