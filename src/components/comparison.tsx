@@ -12,7 +12,7 @@ const wasteful = [
 ];
 
 const valuable = [
-  "10,000+ printable worksheets",
+  "14,000+ printable worksheets",
   "Skill-mapped, age-graded content",
   "Lifetime access + free updates",
   "Real learning your child carries forever",
@@ -77,7 +77,7 @@ export function Comparison() {
           </span>
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-extrabold text-accent">
-              Brightpages Bundle
+              TinyMora Bundle
             </h3>
             <span className="rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
               ₹149

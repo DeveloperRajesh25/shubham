@@ -7,14 +7,13 @@ import { ButtonLink } from "@/components/ui/button";
 import { CHECKOUT_URL } from "@/lib/config";
 
 const features = [
-  "10,000+ printable worksheets across 12 categories",
+  "14,000+ printable worksheets across 12 categories",
   "40+ skill-mapped developmental areas",
   "Lifetime access — unlimited downloads",
   "Print at home, school, or anywhere",
   "PDF format — A4 & US Letter size",
   "Instant Google Drive delivery to your inbox",
   "Bonus: certificates, reward charts, planners",
-  "30-day money-back guarantee",
 ];
 
 export function Pricing() {
@@ -30,7 +29,7 @@ export function Pricing() {
       <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-strong px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-white shadow-md">
-            🔥 75% OFF — LAUNCH PRICING
+            🔥 85% OFF — LAUNCH PRICING
           </span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -57,14 +56,14 @@ export function Pricing() {
             <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-accent-soft">
               <Image
                 src="/images/book-poster-1.jpeg"
-                alt="The Complete Bundle — 10,000+ Kids Worksheets"
+                alt="The Complete Bundle — 14,000+ Kids Worksheets"
                 fill
                 sizes="(max-width: 768px) 90vw, 400px"
                 className="object-cover"
                 loading="lazy"
               />
               <div className="absolute -right-2 top-4 rotate-6 rounded-xl bg-accent-strong px-3 py-2 text-white shadow-xl">
-                <div className="text-2xl font-extrabold leading-none">75%</div>
+                <div className="text-2xl font-extrabold leading-none">85%</div>
                 <div className="text-[10px] font-bold uppercase tracking-wider">OFF</div>
               </div>
             </div>
@@ -77,13 +76,13 @@ export function Pricing() {
 
             <div className="mt-4 flex items-baseline gap-3">
               <span className="text-2xl text-foreground/40 line-through">
-                ₹599
+                ₹999
               </span>
               <span className="text-6xl font-extrabold text-accent-strong md:text-7xl">
                 ₹149
               </span>
               <span className="rounded-full bg-success px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-white">
-                SAVE 75%
+                SAVE 85%
               </span>
             </div>
             <p className="mt-1 text-sm text-foreground/60">one-time payment</p>

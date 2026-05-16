@@ -3,4 +3,4 @@
 export const CHECKOUT_URL =
   "https://superprofile.bio/vp/🌟-ultimate-kids-learning-bundle-14000--worksheets-🎨-📚-";
 
-export const BRAND_NAME = "Brightpages";
+export const BRAND_NAME = "TinyMora";

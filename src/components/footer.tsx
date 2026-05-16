@@ -10,13 +10,6 @@ function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-    </svg>
-  );
-}
 function YoutubeIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -41,7 +34,6 @@ const cols = [
     links: [
       { href: "/privacy", label: "Privacy Policy" },
       { href: "/terms", label: "Terms & Conditions" },
-      { href: "/refund", label: "Refund Policy" },
     ],
   },
 ];
@@ -91,9 +83,6 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <a href="#" aria-label="Instagram" className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-accent transition-colors hover:bg-accent hover:text-white">
               <InstagramIcon className="h-4 w-4" />
-            </a>
-            <a href="#" aria-label="Facebook" className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-accent transition-colors hover:bg-accent hover:text-white">
-              <FacebookIcon className="h-4 w-4" />
             </a>
             <a href="#" aria-label="YouTube" className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-accent transition-colors hover:bg-accent hover:text-white">
               <YoutubeIcon className="h-4 w-4" />

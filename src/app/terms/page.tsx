@@ -23,12 +23,7 @@ export default function TermsPage() {
           </p>
         </section>
 
-        <section>
-          <h2 className="text-xl font-medium">No Refund Policy</h2>
-          <p className="mt-3 text-muted-foreground leading-relaxed">
-            Due to the nature of digital products, all sales are final. Refunds, exchanges, or cancellations are not available once the file has been downloaded.
-          </p>
-        </section>
+       
 
         <section>
           <h2 className="text-xl font-medium">Usage Rights</h2>

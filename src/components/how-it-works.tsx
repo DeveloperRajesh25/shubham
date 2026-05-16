@@ -55,7 +55,7 @@ export function HowItWorks() {
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           className="mx-auto mt-4 max-w-2xl text-base text-foreground/70 md:text-lg"
         >
-          Get started with our 10,000+ worksheets in minutes.
+          Get started with our 14,000+ worksheets in minutes.
         </motion.p>
       </div>
 

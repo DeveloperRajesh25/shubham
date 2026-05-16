@@ -36,7 +36,7 @@ export function StickyCTA() {
                 ₹149
               </span>
               <span className="text-xs text-foreground/60 line-through">
-                ₹599
+                ₹999
               </span>
             </div>
             <a

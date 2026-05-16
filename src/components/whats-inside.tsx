@@ -67,7 +67,7 @@ export function WhatsInside() {
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           className="mx-auto mt-4 max-w-2xl text-base text-foreground/70 md:text-lg"
         >
-          10,000+ worksheets across 12 categories — a complete early-learning
+          14,000+ worksheets across 12 categories — a complete early-learning
           library schools charge ₹15,000/year for. You pay once.
         </motion.p>
       </div>

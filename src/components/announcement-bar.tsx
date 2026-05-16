@@ -29,7 +29,7 @@ export function AnnouncementBar() {
   return (
     <div className="relative z-50 flex h-10 items-center justify-center bg-[var(--accent-strong)] px-12 text-center text-xs font-bold text-white sm:text-sm">
       <span className="truncate">
-        🔥 LIMITED LAUNCH OFFER — 75% OFF ends in{" "}
+        🔥 LIMITED LAUNCH OFFER — 85% OFF ends in{" "}
         <span className="tabular-nums tracking-wider">
           {pad(time.h)}:{pad(time.m)}:{pad(time.s)}
         </span>

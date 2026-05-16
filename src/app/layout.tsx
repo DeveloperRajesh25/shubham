@@ -10,14 +10,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://brightpages.example.com"),
-  title: "Brightpages — 10,000+ printable worksheets for kids 2–9",
+  metadataBase: new URL("https://tinymora.in"),
+  title: "TinyMora — 14,000+ printable worksheets for kids 2–9",
   description:
     "The screen-free way your kid actually wants to learn. Skill-mapped worksheets in 12 categories. Lifetime access for ₹149.",
   openGraph: {
-    title: "Brightpages — Printable worksheets kids actually want to do",
+    title: "TinyMora — Printable worksheets kids actually want to do",
     description:
-      "10,000+ educator-designed worksheets. Lifetime access. ₹149 one-time.",
+      "14,000+ educator-designed worksheets. Lifetime access. ₹149 one-time.",
     images: ["/og-image.png"],
     type: "website",
   },
@@ -34,10 +34,10 @@ export const viewport: Viewport = {
 const productSchema = {
   "@context": "https://schema.org/",
   "@type": "Product",
-  name: "Brightpages — The Complete Worksheet Bundle",
+  name: "TinyMora — The Complete Worksheet Bundle",
   description:
-    "10,000+ printable worksheets for kids aged 2–8 across 12 categories. Lifetime access, instant PDF download.",
-  brand: { "@type": "Brand", name: "Brightpages" },
+    "14,000+ printable worksheets for kids aged 2–9 across 12 categories. Lifetime access, instant PDF download.",
+  brand: { "@type": "Brand", name: "TinyMora" },
   offers: {
     "@type": "Offer",
     price: "149",

@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Users, Star, Download, ShieldCheck } from "lucide-react";
+import { Users, Star, Download, Infinity as InfinityIcon } from "lucide-react";
 
 const stats = [
   { icon: Users, value: "32,000+", label: "Happy parents" },
   { icon: Star, value: "4.9 / 5", label: "Average rating" },
-  { icon: Download, value: "10,000+", label: "Worksheets included" },
-  { icon: ShieldCheck, value: "30-Day", label: "Money-back promise" },
+  { icon: Download, value: "14,000+", label: "Worksheets included" },
+  { icon: InfinityIcon, value: "Lifetime", label: "Unlimited downloads" },
 ];
 
 export function TrustStrip() {

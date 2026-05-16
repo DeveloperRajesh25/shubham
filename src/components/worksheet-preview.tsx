@@ -9,24 +9,23 @@ import { CHECKOUT_URL } from "@/lib/config";
 
 interface Sheet {
   category: string;
-  age: string;
   title: string;
   src: string;
 }
 
 const sheets: Sheet[] = [
-  { category: "Alphabet", age: "Age 4–5", title: "Letter Aa tracing", src: "/images/book-content-pages/page-01.jpeg" },
-  { category: "Hindi", age: "Age 4–5", title: "Varnamala — अ", src: "/images/book-content-pages/page-02.jpeg" },
-  { category: "Tracing", age: "Age 3–4", title: "Uppercase tracing", src: "/images/book-content-pages/page-03.jpeg" },
-  { category: "Science", age: "Age 4–6", title: "My body parts", src: "/images/book-content-pages/page-04.jpeg" },
-  { category: "Coloring", age: "Age 2–4", title: "Apple — color me", src: "/images/book-content-pages/page-05.jpeg" },
-  { category: "Math", age: "Age 5–7", title: "Symmetry", src: "/images/book-content-pages/page-06.jpeg" },
-  { category: "Logic", age: "Age 3–5", title: "Puzzle game", src: "/images/book-content-pages/page-07.jpeg" },
-  { category: "Cut & Paste", age: "Age 4–6", title: "Pattern sheets", src: "/images/book-content-pages/page-08.jpeg" },
-  { category: "Coloring", age: "Age 2–3", title: "Color flashcards", src: "/images/book-content-pages/page-09.jpeg" },
-  { category: "Planners", age: "Age 5–7", title: "Calendar", src: "/images/book-content-pages/page-10.jpeg" },
-  { category: "Life Skills", age: "Age 4–6", title: "Emotion cards", src: "/images/book-content-pages/page-12.jpeg" },
-  { category: "Math", age: "Age 6–8", title: "Addition", src: "/images/book-content-pages/page-18.jpeg" },
+  { category: "Alphabet", title: "Letter Aa tracing", src: "/images/book-content-pages/page-01.jpeg" },
+  { category: "Hindi", title: "Varnamala — अ", src: "/images/book-content-pages/page-02.jpeg" },
+  { category: "Tracing", title: "Uppercase tracing", src: "/images/book-content-pages/page-03.jpeg" },
+  { category: "Science", title: "My body parts", src: "/images/book-content-pages/page-04.jpeg" },
+  { category: "Coloring", title: "Apple — color me", src: "/images/book-content-pages/page-05.jpeg" },
+  { category: "Math", title: "Symmetry", src: "/images/book-content-pages/page-06.jpeg" },
+  { category: "Logic", title: "Puzzle game", src: "/images/book-content-pages/page-07.jpeg" },
+  { category: "Cut & Paste", title: "Pattern sheets", src: "/images/book-content-pages/page-08.jpeg" },
+  { category: "Coloring", title: "Color flashcards", src: "/images/book-content-pages/page-09.jpeg" },
+  { category: "Planners", title: "Calendar", src: "/images/book-content-pages/page-10.jpeg" },
+  { category: "Life Skills", title: "Emotion cards", src: "/images/book-content-pages/page-12.jpeg" },
+  { category: "Math", title: "Addition", src: "/images/book-content-pages/page-18.jpeg" },
 ];
 
 function SheetCard({ sheet }: { sheet: Sheet }) {

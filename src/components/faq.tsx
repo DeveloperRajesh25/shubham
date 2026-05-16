@@ -13,7 +13,7 @@ import {
 const faqs = [
   {
     q: "Is this a digital or physical product?",
-    a: "100% digital. No physical items will be shipped — you get instant access to all 10,000+ worksheets in PDF format delivered to your inbox within minutes of purchase.",
+    a: "100% digital. No physical items will be shipped — you get instant access to all 14,000+ worksheets in PDF format delivered to your inbox within minutes of purchase.",
   },
   {
     q: "How will I receive the worksheets?",
@@ -30,10 +30,6 @@ const faqs = [
   {
     q: "Can I print in black & white or do I need color?",
     a: "Both work perfectly! Color printing makes worksheets more engaging, but black & white is completely fine and saves ink costs.",
-  },
-  {
-    q: "What if I'm not satisfied?",
-    a: "Not happy with your purchase? Get a full refund within 30 days, no questions asked.",
   },
 ];
 
@@ -75,13 +71,13 @@ export function FAQ() {
           Need help? Talk to us on WhatsApp
         </p>
         <a
-          href="https://wa.me/919611563472"
+          href="https://wa.me/918208956592"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-5 py-2.5 text-sm font-bold text-white shadow-md transition-all hover:brightness-105"
         >
           <MessageCircle className="h-4 w-4" />
-          Chat on WhatsApp (+91 96115 63472)
+          Chat on WhatsApp (+91 82089 56592)
         </a>
       </div>
     </section>

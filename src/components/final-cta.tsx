@@ -36,7 +36,7 @@ export function FinalCTA() {
           className="mx-auto mt-5 max-w-xl text-base text-white/90 md:text-lg"
         >
           Join 32,000+ parents who replaced screen time with real learning.
-          Lifetime access, instant delivery, 30-day money-back guarantee.
+          Lifetime access and instant delivery.
         </motion.p>
 
         <motion.div
@@ -47,10 +47,10 @@ export function FinalCTA() {
           className="mt-8 flex flex-col items-center gap-4"
         >
           <div className="flex items-baseline justify-center gap-3 text-white">
-            <span className="text-xl line-through opacity-60">₹599</span>
+            <span className="text-xl line-through opacity-60">₹999</span>
             <span className="text-5xl font-extrabold md:text-6xl">₹149</span>
             <span className="rounded-full bg-highlight px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-foreground">
-              75% OFF
+              85% OFF
             </span>
           </div>
 
@@ -67,13 +67,13 @@ export function FinalCTA() {
 
           <div className="mt-2 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-white/90">
             <span className="inline-flex items-center gap-1">
-              <ShieldCheck className="h-3.5 w-3.5" /> 30-day money-back
-            </span>
-            <span className="inline-flex items-center gap-1">
               <Zap className="h-3.5 w-3.5" /> Instant delivery
             </span>
             <span className="inline-flex items-center gap-1">
               <Download className="h-3.5 w-3.5" /> Lifetime access
+            </span>
+            <span className="inline-flex items-center gap-1">
+              <ShieldCheck className="h-3.5 w-3.5" /> Secure checkout
             </span>
           </div>
         </motion.div>
