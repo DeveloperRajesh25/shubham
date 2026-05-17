@@ -4,6 +4,7 @@ import { Hero } from "@/components/hero";
 import { TrustStrip } from "@/components/trust-strip";
 import { Problem } from "@/components/problem";
 import { WhatsInside } from "@/components/whats-inside";
+import { Worksheets } from "@/components/worksheets";
 import { WorksheetPreview } from "@/components/worksheet-preview";
 import { HowItWorks } from "@/components/how-it-works";
 import { Comparison } from "@/components/comparison";
@@ -25,6 +26,7 @@ export default function Home() {
         <TrustStrip />
         <Problem />
         <WhatsInside />
+        <Worksheets />
         <WorksheetPreview />
         <HowItWorks />
         <Comparison />

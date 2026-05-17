@@ -81,10 +81,10 @@ export function Footer() {
             © 2026 {BRAND_NAME}. Made for curious kids and tired parents.
           </p>
           <div className="flex items-center gap-3">
-            <a href="#" aria-label="Instagram" className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-accent transition-colors hover:bg-accent hover:text-white">
+            <a href="https://www.instagram.com/heyshubham.cr?igsh=OHllM3cwYnlqbHAz&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-accent transition-colors hover:bg-accent hover:text-white">
               <InstagramIcon className="h-4 w-4" />
             </a>
-            <a href="#" aria-label="YouTube" className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-accent transition-colors hover:bg-accent hover:text-white">
+            <a href="https://youtube.com/@tinymoraa?si=b5X0bKUuO0iR6EUY" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-accent transition-colors hover:bg-accent hover:text-white">
               <YoutubeIcon className="h-4 w-4" />
             </a>
           </div>
