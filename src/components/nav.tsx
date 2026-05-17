@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X, ArrowRight, BookOpen } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { ButtonLink } from "@/components/ui/button";
 import { CHECKOUT_URL, BRAND_NAME } from "@/lib/config";
 import { cn } from "@/lib/utils";
@@ -49,8 +50,15 @@ export function Nav() {
           href="#top"
           className="flex items-center gap-2 font-extrabold text-xl tracking-tight text-foreground"
         >
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--accent)] text-white">
-            <BookOpen className="h-4 w-4" />
+          <span className="relative h-8 w-8 overflow-hidden">
+            <Image
+              src="/logo.PNG"
+              alt={`${BRAND_NAME} logo`}
+              width={32}
+              height={32}
+              priority
+              className="h-8 w-8 object-contain"
+            />
           </span>
           {BRAND_NAME}
         </a>

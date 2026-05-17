@@ -1,4 +1,4 @@
-import { BookOpen } from "lucide-react";
+import Image from "next/image";
 import { BRAND_NAME } from "@/lib/config";
 
 function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -45,8 +45,14 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-10 md:grid-cols-3">
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 text-xl font-extrabold tracking-tight text-foreground">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-white">
-                <BookOpen className="h-4 w-4" />
+              <span className="relative h-8 w-8 overflow-hidden">
+                <Image
+                  src="/logo.PNG"
+                  alt={`${BRAND_NAME} logo`}
+                  width={32}
+                  height={32}
+                  className="h-8 w-8 object-contain"
+                />
               </span>
               {BRAND_NAME}
             </div>
