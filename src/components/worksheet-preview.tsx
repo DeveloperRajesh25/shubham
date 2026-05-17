@@ -46,7 +46,7 @@ function SheetCard({ sheet }: { sheet: Sheet }) {
       </div>
       <div className="flex flex-col gap-0.5 p-3">
         <span className="text-[10px] font-bold uppercase tracking-wider text-accent">
-          {sheet.category} · {sheet.age}
+          {sheet.category}
         </span>
         <h3 className="text-sm font-bold text-foreground">{sheet.title}</h3>
       </div>
