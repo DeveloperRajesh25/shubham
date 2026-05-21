@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import { MessageCircle } from "lucide-react";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import {
   Accordion,
@@ -35,7 +34,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+    <section id="faq" className="mx-auto max-w-3xl px-6 py-8 md:py-24">
       <div className="text-center">
         <Eyebrow color="accent">Got questions?</Eyebrow>
         <motion.h2
@@ -65,21 +64,6 @@ export function FAQ() {
           ))}
         </Accordion>
       </motion.div>
-
-      <div className="mt-8 flex flex-col items-center gap-3 rounded-2xl bg-success-soft p-6 text-center">
-        <p className="text-sm font-bold text-foreground">
-          Need help? Talk to us on WhatsApp
-        </p>
-        <a
-          href="https://wa.me/918208956592"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-5 py-2.5 text-sm font-bold text-white shadow-md transition-all hover:brightness-105"
-        >
-          <MessageCircle className="h-4 w-4" />
-          Chat on WhatsApp (+91 82089 56592)
-        </a>
-      </div>
     </section>
   );
 }

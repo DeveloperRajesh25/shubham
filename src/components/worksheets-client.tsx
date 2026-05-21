@@ -17,7 +17,7 @@ export function WorksheetsClient({
   return (
     <section
       id="worksheets"
-      className="mx-auto max-w-6xl px-6 py-16 md:py-24"
+      className="mx-auto max-w-6xl px-6 py-8 md:py-24"
     >
       <div className="mx-auto max-w-3xl text-center">
         <Eyebrow color="highlight">All Categories</Eyebrow>

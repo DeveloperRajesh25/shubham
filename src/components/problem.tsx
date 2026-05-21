@@ -41,7 +41,7 @@ const problems = [
 
 export function Problem() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+    <section className="mx-auto max-w-6xl px-6 py-8 md:py-24">
       <div className="text-center">
         <Eyebrow color="accent">The parent problem</Eyebrow>
         <motion.h2

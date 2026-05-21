@@ -26,7 +26,7 @@ export function Pricing() {
           "radial-gradient(800px 400px at 100% 0%, #FFE4CC 0%, transparent 60%), radial-gradient(700px 400px at 0% 100%, #FEF9C3 0%, transparent 55%), var(--background)",
       }}
     >
-      <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
+      <div className="mx-auto max-w-5xl px-6 py-8 md:py-24">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-strong px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-white shadow-md">
             🔥 85% OFF — LAUNCH PRICING

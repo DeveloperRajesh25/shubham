@@ -20,7 +20,7 @@ const valuable = [
 
 export function Comparison() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+    <section className="mx-auto max-w-6xl px-6 py-8 md:py-24">
       <div className="mx-auto max-w-3xl text-center">
         <Eyebrow color="accent">Smart spending</Eyebrow>
         <motion.h2

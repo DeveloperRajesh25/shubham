@@ -43,7 +43,7 @@ const chatScreens = [
 
 export function Testimonials() {
   return (
-    <section id="reviews" className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+    <section id="reviews" className="mx-auto max-w-6xl px-6 py-8 md:py-24">
       <div className="mx-auto max-w-3xl text-center">
         <Eyebrow color="success">
           <MessageCircle className="h-3 w-3" /> WhatsApp love

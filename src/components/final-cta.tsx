@@ -8,7 +8,7 @@ import { CHECKOUT_URL } from "@/lib/config";
 export function FinalCTA() {
   return (
     <section
-      className="relative overflow-hidden px-6 py-16 md:py-24"
+      className="relative overflow-hidden px-6 py-8 md:py-24"
       style={{
         background:
           "linear-gradient(135deg, #EA580C 0%, #DC2626 100%)",

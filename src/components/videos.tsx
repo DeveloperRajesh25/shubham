@@ -73,7 +73,7 @@ function VideoCard({ id, index }: { id: string; index: number }) {
 
 export function Videos() {
   return (
-    <section id="videos" className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+    <section id="videos" className="mx-auto max-w-6xl px-6 py-8 md:py-24">
       <div className="mx-auto max-w-3xl text-center">
         <Eyebrow color="highlight">
           <Video className="h-3 w-3" /> Parents on camera
