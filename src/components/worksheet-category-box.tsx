@@ -36,7 +36,7 @@ export function WorksheetCategoryBox({
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="group overflow-hidden rounded-2xl border-2 border-border bg-white shadow-sm transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg"
     >
-      <div className="relative aspect-square w-full overflow-hidden bg-background">
+      <div className="relative aspect-3/4 w-full overflow-hidden bg-background">
         {images.length > 0 ? (
           <AnimatePresence>
             <motion.div
@@ -52,7 +52,7 @@ export function WorksheetCategoryBox({
                 alt={displayName}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                className="object-cover"
+                className="object-contain"
                 priority={false}
               />
             </motion.div>

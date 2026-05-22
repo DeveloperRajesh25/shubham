@@ -17,7 +17,7 @@ export function WorksheetsClient({
   return (
     <section
       id="worksheets"
-      className="mx-auto max-w-6xl px-6 py-8 md:py-24"
+      className="mx-auto max-w-6xl px-3 py-8 md:px-6 md:py-24"
     >
       <div className="mx-auto max-w-3xl text-center">
         <Eyebrow color="highlight">All Categories</Eyebrow>
@@ -41,7 +41,7 @@ export function WorksheetsClient({
         </motion.p>
       </div>
 
-      <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-12 grid grid-cols-2 gap-3 md:gap-6 lg:grid-cols-4">
         {categories.map((category) => (
           <WorksheetCategoryBox
             key={category.name}
