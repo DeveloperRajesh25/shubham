@@ -36,7 +36,7 @@ export function FAQ() {
   return (
     <section id="faq" className="mx-auto max-w-3xl px-6 py-8 md:py-24">
       <div className="text-center">
-        <Eyebrow color="accent">Got questions?</Eyebrow>
+        <Eyebrow color="accent">FAQ</Eyebrow>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

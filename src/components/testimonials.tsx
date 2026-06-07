@@ -29,6 +29,24 @@ const reviews: Review[] = [
     name: "Rahul V.",
     meta: "Mumbai • dad",
   },
+  {
+    quote:
+      "The activities are engaging and educational at the same time. My daughter looks forward to using it every day, and I can see a noticeable improvement in her learning skills.",
+    name: "Priya S.",
+    meta: "Bengaluru • parent",
+  },
+  {
+    quote:
+      "Very well-designed content that keeps children interested and motivated. It’s a great balance of fun and learning, and the progress has been impressive.",
+    name: "Rajesh K.",
+    meta: "Ahmedabad • parent",
+  },
+  {
+    quote:
+      "My son enjoys every activity and stays focused for longer periods. The quality of the learning material is outstanding and worth every penny.",
+    name: "Neha M.",
+    meta: "Jaipur • parent",
+  },
 ];
 
 export function Testimonials() {

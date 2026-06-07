@@ -20,7 +20,7 @@ export function WorksheetsClient({
       className="mx-auto max-w-6xl px-3 py-8 md:px-6 md:py-24"
     >
       <div className="mx-auto max-w-3xl text-center">
-        <Eyebrow color="highlight">All Categories</Eyebrow>
+        <Eyebrow color="highlight">Samples</Eyebrow>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

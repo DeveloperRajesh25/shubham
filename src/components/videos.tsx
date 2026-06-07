@@ -12,6 +12,8 @@ const videoIds = [
   "eE1oAzlJHJM",
   "87iYONiEQao",
   "R6jqawNADvQ",
+  "zCSBCoUDqS0",
+  "_8iS4T2_z3s",
 ];
 
 function VideoCard({ id, index }: { id: string; index: number }) {
