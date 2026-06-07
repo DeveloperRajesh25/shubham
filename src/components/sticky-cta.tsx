@@ -45,7 +45,7 @@ export function StickyCTA() {
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-1.5 rounded-full bg-accent px-5 py-3 text-sm font-bold text-white shadow-md transition-all hover:bg-accent-hover active:scale-[0.98]"
             >
-              Get Bundle
+              Get Lifetime Access
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>

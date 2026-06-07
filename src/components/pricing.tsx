@@ -116,10 +116,7 @@ export function Pricing() {
                 <ShieldCheck className="h-3.5 w-3.5 text-success" />
                 Secure checkout
               </span>
-              <span className="inline-flex items-center gap-1">
-                <Zap className="h-3.5 w-3.5 text-accent" />
-                Instant delivery
-              </span>
+            
               <span className="inline-flex items-center gap-1">
                 <Download className="h-3.5 w-3.5 text-accent" />
                 Google Drive access

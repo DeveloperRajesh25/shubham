@@ -36,7 +36,7 @@ export function FinalCTA() {
           className="mx-auto mt-5 max-w-xl text-base text-white/90 md:text-lg"
         >
           Join 32,000+ parents who replaced screen time with real learning.
-          Lifetime access and instant delivery.
+          Instant access.
         </motion.p>
 
         <motion.div
@@ -67,7 +67,7 @@ export function FinalCTA() {
 
           <div className="mt-2 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-white/90">
             <span className="inline-flex items-center gap-1">
-              <Zap className="h-3.5 w-3.5" /> Instant delivery
+              <Zap className="h-3.5 w-3.5" /> Instant Access
             </span>
             <span className="inline-flex items-center gap-1">
               <Download className="h-3.5 w-3.5" /> Lifetime access

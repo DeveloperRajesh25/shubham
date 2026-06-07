@@ -34,7 +34,7 @@ export function Hero() {
             </div>
 
             <h1 className="mt-3 text-[26px] font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-[40px] lg:text-5xl">
-              14,000+ Worksheets to Keep Your Child{" "}
+              14,000+ Printable Worksheets to Keep Your Child{" "}
               <span className="relative inline-block">
                 <span className="relative z-10">Engaged</span>
                 <span className="absolute inset-x-0 bottom-1 h-2.5 z-0 bg-highlight md:h-3" />
@@ -91,7 +91,7 @@ export function Hero() {
             {/* Quick trust pills */}
             <div className="mt-3 flex flex-wrap gap-1.5">
               <span className="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 text-[10px] font-semibold text-foreground/80 shadow-sm ring-1 ring-border sm:text-xs">
-                <Zap className="h-3 w-3 text-accent" /> Instant Delivery
+                <Zap className="h-3 w-3 text-accent" /> Instant Access
               </span>
               <span className="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 text-[10px] font-semibold text-foreground/80 shadow-sm ring-1 ring-border sm:text-xs">
                 <Download className="h-3 w-3 text-accent" /> Lifetime Access

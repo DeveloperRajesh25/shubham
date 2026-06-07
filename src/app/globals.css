@@ -101,6 +101,29 @@ section[id] {
   50% { box-shadow: 0 0 0 12px rgba(234, 88, 12, 0); }
 }
 
+@keyframes announcement-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.announcement-marquee {
+  display: inline-flex;
+  width: max-content;
+  min-width: 100%;
+  align-items: center;
+  gap: 1.5rem;
+  white-space: nowrap;
+  animation: announcement-marquee 14s linear infinite;
+}
+
+.announcement-marquee-item {
+  flex: 0 0 auto;
+}
+
 .cta-glow {
   animation: pulse-glow 2.4s ease-in-out infinite;
 }
@@ -108,4 +131,5 @@ section[id] {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .cta-glow { animation: none; }
+  .announcement-marquee { animation: none; transform: none; }
 }

@@ -2,10 +2,8 @@ import { AnnouncementBar } from "@/components/announcement-bar";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { TrustStrip } from "@/components/trust-strip";
-import { Problem } from "@/components/problem";
 import { WhatsInside } from "@/components/whats-inside";
 import { Worksheets } from "@/components/worksheets";
-import { HowItWorks } from "@/components/how-it-works";
 import { Comparison } from "@/components/comparison";
 import { Pricing } from "@/components/pricing";
 import { Testimonials } from "@/components/testimonials";
@@ -23,11 +21,8 @@ export default function Home() {
       <main>
         <Hero />
         <TrustStrip />
-        <Problem />
         <WhatsInside />
         <Worksheets />
-        <HowItWorks />
-        <Comparison />
         <Pricing />
         <Testimonials />
         <Videos />
