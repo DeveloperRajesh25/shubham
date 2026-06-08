@@ -86,7 +86,8 @@ export function WhatsInside() {
                 delay: (i % 3) * 0.08,
                 ease: "easeOut",
               }}
-              className="group flex items-start gap-4 rounded-2xl border-2 border-orange-400 bg-white p-5 transition-all hover:-translate-y-1 hover:border-orange-500 hover:shadow-lg"
+              className="group flex items-start gap-4 rounded-2xl border-2 bg-white p-5 transition-all hover:-translate-y-1 hover:shadow-lg"
+              style={{ borderColor: "#F97316" }}
             >
               <div
                 className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl"

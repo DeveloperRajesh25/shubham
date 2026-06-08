@@ -25,7 +25,7 @@ const cols = [
     links: [
       { href: "#whats-inside", label: "What's inside" },
       { href: "#pricing", label: "Pricing" },
-      { href: "#preview", label: "Samples" },
+      { href: "#worksheets", label: "Samples" },
       { href: "#faq", label: "FAQ" },
     ],
   },
