@@ -2,6 +2,7 @@ import { AnnouncementBar } from "@/components/announcement-bar";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { TrustStrip } from "@/components/trust-strip";
+import { FreeDemo } from "@/components/free-demo";
 import { WhatsInside } from "@/components/whats-inside";
 import { Worksheets } from "@/components/worksheets";
 import { Comparison } from "@/components/comparison";
@@ -21,6 +22,7 @@ export default function Home() {
       <main>
         <Hero />
         <TrustStrip />
+        <FreeDemo />
         <WhatsInside />
         <Worksheets />
         <Pricing />
